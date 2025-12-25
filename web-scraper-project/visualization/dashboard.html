@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Scraper Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+        .stats { display: flex; justify-content: space-between; margin: 30px 0; flex-wrap: wrap; }
+        .stat-box { background: #3498db; color: white; padding: 20px; border-radius: 5px; text-align: center; flex: 1; margin: 10px; min-width: 200px; }
+        .stat-box h2 { margin: 0; font-size: 28px; }
+        .stat-box p { margin: 5px 0; font-size: 14px; }
+        .charts { margin: 40px 0; }
+        .chart { margin: 30px 0; text-align: center; }
+        .chart img { max-width: 100%; border: 1px solid #ddd; border-radius: 5px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+        footer { margin-top: 40px; text-align: center; color: #7f8c8d; padding-top: 20px; border-top: 1px solid #eee; }
+        .data-summary { background: #f8f9fa; padding: 20px; border-radius: 5px; margin: 20px 0; }
+        .data-summary h3 { margin-top: 0; }
+        ul { padding-left: 20px; }
+        li { margin: 8px 0; }
+        @media (max-width: 768px) { 
+            .stats { flex-direction: column; }
+            .stat-box { margin: 10px 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 Book Scraper Analytics Dashboard</h1>
+        
+        <div class="stats">
+            <div class="stat-box" style="background: #3498db;">
+                <h2>1997</h2>
+                <p>Total Books Scraped</p>
+            </div>
+            <div class="stat-box" style="background: #2ecc71;">
+                <h2>50</h2>
+                <p>Unique Categories</p>
+            </div>
+            <div class="stat-box" style="background: #e74c3c;">
+                <h2>£35.05</h2>
+                <p>Average Price</p>
+            </div>
+            <div class="stat-box" style="background: #f39c12;">
+                <h2>£10.00 - £59.99</h2>
+                <p>Price Range</p>
+            </div>
+        </div>
+        
+        <div class="data-summary">
+            <h3>📋 Project Summary</h3>
+            <p>This dashboard displays analytics from 1997 books scraped from books.toscrape.com.</p>
+            <p>The data includes 50 different categories with prices ranging from £10.00 to £59.99.</p>
+        </div>
+        
+        <div class="charts">
+            <div class="chart">
+                <h3>📊 Book Analysis Overview</h3>
+                <p>Left: Price distribution of all books | Right: Top 10 categories by book count</p>
+                <img src="charts/book_analysis.png" alt="Book Analysis Charts">
+            </div>
+            
+            <div class="chart">
+                <h3>💰 Price Distribution by Category</h3>
+                <p>Box plot showing price variations across top categories (median, quartiles, outliers)</p>
+                <img src="charts/price_by_category.png" alt="Price by Category">
+            </div>
+        </div>
+        
+        <div class="data-summary">
+            <h3>🏆 Top 5 Categories</h3>
+            <ul>
+                <li><strong>Default</strong>: 304 books</li>
+<li><strong>Nonfiction</strong>: 220 books</li>
+<li><strong>Sequential Art</strong>: 150 books</li>
+<li><strong>Add a comment</strong>: 134 books</li>
+<li><strong>Fiction</strong>: 130 books</li>
+
+            </ul>
+        </div>
+        
+        <footer>
+            <p>📅 Generated on 2025-12-25 08:32</p>
+            <p>📂 Data Source: books.toscrape.com | 🎯 Project: Web Scraper Portfolio Project</p>
+            <p>💡 Tip: The charts above show the complete analysis of your scraped book data!</p>
+        </footer>
+    </div>
+</body>
+</html>
